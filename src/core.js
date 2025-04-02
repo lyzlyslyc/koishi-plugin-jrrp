@@ -54,6 +54,7 @@ module.exports = (ctx, config) => {
       /** @type {string} */
       let name
       if (ctx.database) name = session.user.name
+      if (!name) name = session.author.nick
       if (!name) name = session.author.nickname
       if (!name) name = session.author.username
 
