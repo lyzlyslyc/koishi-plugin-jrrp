@@ -2,6 +2,9 @@ const { Schema: S } = require('koishi')
 const core = require('./src/core.js')
 
 module.exports.name = 'jrrp'
+module.exports.inject = {
+    optional: ['database'],
+}
 
 const ToString = S.union([
   S.string(),

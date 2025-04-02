@@ -31,6 +31,9 @@
   "koishi": {
     "description": {
       "zh": "今日人品插件"
+    },
+    "service": {
+        "optional": ["database"]
     }
   },
   "peerDependencies": {
