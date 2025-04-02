@@ -59,7 +59,7 @@ module.exports = (ctx, config) => {
 
       const luck = createHash('sha256')
       luck.update(session.userId)
-      luck.update((new Date().getTime() / (1000 * 60 * 60 * 24)).toFixed(0))
+      luck.update(`${~~((Date.now()-new Date().getTimezoneOffset()*6e4)/864e5)}`)
       luck.update('42')
 
       const luckValue = parseInt(luck.digest('hex'), 16) % 101
